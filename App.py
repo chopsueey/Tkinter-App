@@ -25,6 +25,13 @@ class App(tk.Tk):
         self.columnconfigure(1, weight=1)
         self.columnconfigure(2, weight=1)
 
+        # Menubar
+        menubar = tk.Menu(self)
+        self.config(menu=menubar)
+
+        file_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Datei", menu=file_menu)
+
         # Frames
         for i in range(0, self.grid_size()[0]):
             self.menu = Menu(master=self, relief="groove")
