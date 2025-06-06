@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox import showinfo
 from lib.functions import open_file, close_window
+from style import init_style
 from components.Menu import Menu
 from components.Soundbuttons import Soundbuttons
 
@@ -15,7 +16,9 @@ class App(tk.Tk):
 
         self.title("Soundboard")
         self.iconbitmap(r'./favicon.ico')
-        # self.geometry("600x300")
+        self.geometry("1000x600")
+        
+        init_style()
 
         # Maingrid
         self.rowconfigure(0, weight=1)

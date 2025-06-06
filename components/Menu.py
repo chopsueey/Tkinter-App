@@ -1,12 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
-from .Button import Button
+from .Buttons.Button import Button
 from lib.functions import close_window, open_file
 
 
 class Menu(ttk.Frame):
     def __init__(self, master=None, **kwargs):
-        super().__init__(master, **kwargs)
+        super().__init__(master, style='Card.TFrame', **kwargs)
+
+        # Self
 
         # Buttons
 
